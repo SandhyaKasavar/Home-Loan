@@ -1,0 +1,116 @@
+<div class="col-sm-10">
+    <div class="row">
+
+        <div class="col-sm-4">
+            <div class="card">
+                <h5 class="text-muted">
+                    <img src="../../assets/owner.png" style="width: 20px; height: 20px"> &nbsp;
+                    Loan
+                </h5>
+                <p class="card-text">
+                    ID: {{product.id}}<br>
+                    Name: {{product.name}}
+
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+            <div class="card">
+                <h5 class="card-title mb=2 text-muted">
+                    <img src="../../assets/loanstatus.png" style="width: 20px; height: 20px">
+                    Loan Status</h5>
+                <p class="card-text">
+                    Status: {{product.status}} <br>
+                    <img src="../../assets/bluecircle.png" style="width: 13px; height: 13px"> Acquired &nbsp;
+                    <img src="../../assets/arrowright.png" style="width: 15px; height: 15px"> &nbsp;
+                    <img src="../../assets/bluecircle.png" style="width: 13px; height: 13px"> Current &nbsp;
+                    <img src="../../assets/arrowright.png" style="width: 15px; height: 15px"> &nbsp;
+                    <img src="../../assets/bluecircle.png" style="width: 13px; height: 13px"> Delinquent &nbsp;
+                    <img src="../../assets/arrowright.png" style="width: 15px; height: 15px"> &nbsp;
+                    <img src="../../assets/greencircle.png" style="width: 13px; height: 13px"> REO &nbsp;
+                    <img src="../../assets/arrowright.png" style="width: 15px; height: 15px"> &nbsp;
+                    <img src="../../assets/graycircle.png" style="width: 13px; height: 13px"> Sold &nbsp;
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align:right">
+        <P class="links">
+            <a class="hover" (click)='propertyStatus=propertyStatus?false:true'>
+                <img src="../../assets/property.png" style="width: 16px; height: 16px"> <u>Property</u>
+            </a>&nbsp;&nbsp;
+            <a class="hover" (click)='loanStatus=loanStatus?false:true'>
+                <img src="../../assets/loandetails.png" style="width: 16px; height: 16px"> <u>Loan</u>
+            </a>
+
+            <button (click)='propertyStatus=propertyStatus?false:true' class="button1">
+                <img src="../../assets/property.png" style="width: 16px; height: 16px"> Property
+            </button>
+            <button (click)='loanStatus=loanStatus?false:true' class="button1">
+                <img src="../../assets/loandetails.png" style="width: 16px; height: 16px"> Loan
+            </button>
+            <button (click)='repairsStatus=repairsStatus?false:true' class="button1">
+                <img src="../../assets/repairs.png" style="width: 16px; height: 16px"> Repairs
+            </button>
+            <button class="button1">
+                <img src="../../assets/dots.png" style="width: 16px; height: 16px"> Appraisal
+            </button>
+            <button class="button1">
+                <img src="../../assets/dots.png" style="width: 16px; height: 16px"> Issues
+            </button>
+            <button class="button1">
+                <img src="../../assets/dots.png" style="width: 16px; height: 16px"> Sales
+            </button>
+            <button class="button1">
+                <img src="../../assets/dots.png" style="width: 16px; height: 16px"> Valuations
+            </button>
+            <button class="button1">
+                <img src="../../assets/dots.png" style="width: 16px; height: 16px"> Listings
+            </button>
+        </P>
+    </div>
+
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [(expanded)]="propertyStatus">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <img src="../../assets/property.png" style="width: 20px; height: 20px"> &nbsp;
+                    Property
+                </mat-panel-title>
+                <mat-panel-description>
+                    Property Details go here <br>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+        <br>
+        <mat-expansion-panel [(expanded)]="loanStatus">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <img src="../../assets/loandetails.png" style="width: 20px; height: 20px"> &nbsp;
+                    Loan Details
+                </mat-panel-title>
+                <mat-panel-description>
+                    Loan Details go here
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+        <br>
+        <mat-expansion-panel [(expanded)]="repairsStatus">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <img src="../../assets/repairs.png" style="width: 20px; height: 20px"> &nbsp;
+                    Repairs
+                </mat-panel-title>
+                <mat-panel-description>
+                    Repair Details go here
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
